@@ -1,25 +1,25 @@
 var citiesArr = ['Bishkek', 'LosAngeles', 'Chicago', 'NewYork', 'Houston', 'Dallas', 'Philadelphia', 'Seattle','sss','Osh']
 var newArray = [] 
 var othersCities = []
-var CitiesOnS = []
+var citiesOnS = []
 var citiesNotOnS = []
 for (var i = 0; i < citiesArr.length; i++) {
-    City = citiesArr[i].length;
-    if(City >= 6){
+    city = citiesArr[i].length;
+    if(city >= 6){
         newArray.push(citiesArr[i])
     }
     else {
         othersCities.push(citiesArr[i])
     }
     if (citiesArr[i][0] === 's' || citiesArr[i][0] === 'S') {
-        CitiesOnS.push(citiesArr[i])
+        citiesOnS.push(citiesArr[i])
     } else {
         citiesNotOnS.push(citiesArr[i])
     }
 }
 console.log(`Массив с городами больше 6 символов ${newArray}`)
 console.log(`Массив с городами меньше 6 символов ${othersCities}`)
-console.log(`Массив с городами начинающиеся на S ${CitiesOnS}`)
+console.log(`Массив с городами начинающиеся на S ${citiesOnS}`)
 console.log(`Массив с городами не начинающиеся на S ${citiesNotOnS}`)
 
 
