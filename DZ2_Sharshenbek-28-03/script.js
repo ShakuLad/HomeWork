@@ -1,27 +1,27 @@
 var citiesArr = ['Bishkek', 'LosAngeles', 'Chicago', 'NewYork', 'Houston', 'Dallas', 'Philadelphia', 'Seattle','sss','Osh']
-var newArray = [] 
+var newArray = []
 var othersCities = []
-var citiesOnS = []
-var citiesNotOnS = []
+var citiesWithS = []
+var citiesWithoutS = []
 for (var i = 0; i < citiesArr.length; i++) {
-    city = citiesArr[i].length;
+    var city = citiesArr[i].length;
     if(city >= 6){
         newArray.push(citiesArr[i])
     }
     else {
         othersCities.push(citiesArr[i])
     }
-    if (citiesArr[i][0] === 's' || citiesArr[i][0] === 'S') {
-        citiesOnS.push(citiesArr[i])
-    } else {
-        citiesNotOnS.push(citiesArr[i])
-    }
+    if(citiesArr[i].toLowerCase().includes('s')) {
+        citiesWithS.push(citiesArr[i])
+    } else{
+        citiesWithoutS.push(citiesArr[i])
+    } 
 }
+
 console.log(`Массив с городами больше 6 символов ${newArray}`)
 console.log(`Массив с городами меньше 6 символов ${othersCities}`)
-console.log(`Массив с городами начинающиеся на S ${citiesOnS}`)
-console.log(`Массив с городами не начинающиеся на S ${citiesNotOnS}`)
-
+console.log(`Массив с буквой s ${citiesWithS}`)
+console.log(`Массив без буквы s ${citiesWithoutS}`)
 
 var trafficLight = prompt('Введи цвета светофора').toLowerCase()
 switch(trafficLight) {
