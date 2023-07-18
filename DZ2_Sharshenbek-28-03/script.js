@@ -11,7 +11,7 @@ for (var i = 0; i < citiesArr.length; i++) {
     else {
         othersCities.push(citiesArr[i])
     }
-    if(citiesArr[i].toLowerCase().includes('s')) {
+    if(s in citiesArr[0]) {
         citiesWithS.push(citiesArr[i])
     } else{
         citiesWithoutS.push(citiesArr[i])
